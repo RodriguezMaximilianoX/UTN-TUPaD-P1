@@ -8,4 +8,3 @@
 
 ## Contenido
 Dentro de este repositorio subiré todas mis actividades realizadas durante la cursada
-
