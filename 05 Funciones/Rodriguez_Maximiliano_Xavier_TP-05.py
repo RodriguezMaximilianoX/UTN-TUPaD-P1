@@ -1,83 +1,155 @@
 # PROGRAMACIÓN Ⅰ
 
-## Práctico 5.1: Listas
+## Práctico 5: Funciones
 
 ## Alumno: Maximiliano Xavier Rodriguez
 
-### Actividades
+### Funciones Secundarias
+"""1"""
+"""def imprimir_hola_mundo(mensaje): 
+  print(mensaje)"""
 
-"""1) Crear una lista con los números del 1 al 100 que sean múltiplos de 4. Utilizar la función
-range."""
-"""numeros_multiplos_4 = list(range(4, 101, 4))"""
+"""2"""
+"""def saludar_usuario(nombre):
+  print(f"Hola {nombre}!")"""
 
-"""2) Crear una lista con cinco elementos (colocar los elementos que más te gusten) y mostrar el
-penúltimo."""
-"""my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(my_list[-2])"""
+"""3"""
+"""def informacion_personal(nombre, apellido, edad, residencia):
+    print(f"Soy {nombre} {apellido}, tengo {edad} años y vivo en {residencia}.")"""
 
-"""3) Crear una lista vacía, agregar tres palabras con append e imprimir la lista resultante por
-pantalla."""
-"""my_list = []
-print(my_list)
-my_list.append("Mario")
-my_list.append("Luis")
-my_list.append("Juan")
-print(my_list)"""
+"""4"""
+"""import math
+def calcular_area_circulo(radio):
+    return math.pi * (radio ** 2)
 
-"""4) Reemplazar el segundo y último valor de la lista “animales” con las palabras “loro” y “oso”,
-respectivamente."""
-"""animales = ["perro", "gato", "conejo", "pez"]
-print(animales)
-animales[1] = "loro"
-animales[-1] = "oso"
-print(animales)"""
+def calcular_perimetro_circulo(radio):
+    return 2 * math.pi * radio"""
 
-"""5) Analizar el siguiente programa y explicar con tus palabras qué es lo que realiza"""
-"""numeros = [8, 15, 3, 22, 7]
-numeros.remove(max(numeros))
-print(numeros)"""
-"""En el programa dado existe una lista de numeros sin orden y con distintos valores. Luego con la funcion remove se elimina uno de los elementos de la lista
-en este caso se pasa como parametro la funcion max que devuelve el numero mas grande de la lista. Por lo tanto el valor eliminado es el 22 y la lista resultante es [8, 15, 3, 7]"""
+"""5"""
+"""def segundos_a_horas(segundos):
+    horas = segundos / 3600
+    return horas"""
 
-"""6) Crear una lista con números del 10 al 30 (incluído), haciendo saltos de 5 en 5 y mostrar por
-pantalla los dos primeros."""
-"""numeros = list(range(10, 31, 5))
-print(numeros[0])
-print(numeros[1])  """
+"""6"""
+"""def tabla_multiplicar(num):
+  for i in range(1, 11):
+    resultado = num * i
+    print(f"{num} x {i} = {resultado}")"""
 
-"""7) Reemplazar los dos valores centrales (índices 1 y 2) de la lista “autos” por dos nuevos valores
-cualesquiera."""
-"""autos = ["sedan", "polo", "suran", "gol"]
-autos[1] = "fiesta"
-autos[2] = "focus" """
+"""7"""
+"""def operaciones_basicas(a, b):
+  suma = a + b
+  resta = a - b
+  multiplicacion = a * b
+  division = a / b
+  resultados = (suma, resta, multiplicacion, division)
+  return resultados """
 
-"""8) Crear una lista vacía llamada "dobles" y agregar el doble de 5, 10 y 15 usando append
-directamente. Imprimir la lista resultante por pantalla."""
-"""dobles = []
-dobles.append(5*2)
-dobles.append(10*2)
-dobles.append(15*2)
-print(dobles)"""
+"""8"""
+"""def calcular_imc(peso, altura):
+  imc = peso / (altura ** 2)
+  return imc"""
 
-"""9) Dada la lista “compras”, cuyos elementos representan los productos comprados por
-diferentes clientes:
-a) Agregar "jugo" a la lista del tercer cliente usando append.
-b) Reemplazar "fideos" por "tallarines" en la lista del segundo cliente.
-c) Eliminar "pan" de la lista del primer cliente.
-d) Imprimir la lista resultante por pantalla"""
-"""compras = [["pan", "leche"], ["arroz", "fideos", "salsa"],["agua"]]
-compras[2].append("jugo")
-compras[1][1] = "tallarines"
-compras[0].remove("pan")
-print(compras)"""
 
-"""10) Elaborar una lista anidada llamada “lista_anidada” que contenga los siguientes elementos:
-● Posición lista_anidada[0]: 15
-● Posición lista_anidada[1]: True
-● Posición lista_anidada[2][0]: 25.5
-● Posición lista_anidada[2][1]: 57.9
-● Posición lista_anidada[2][2]: 30.6
-● Posición lista_anidada[3]: False
-Imprimir la lista resultante por pantalla."""
-"""lista_anidada = [15, True, [25.5, 57.9, 30.6], False]
-print(lista_anidada)"""
+"""9"""
+"""def celsius_a_fahrenheit(celsius):
+  temp_f = (celsius * (9/5) + 32)
+  return temp_f"""
+
+"""10"""
+"""def calcular_promedio(a, b, c):
+  promedio = (a+b+c)/3
+  print(f"El promedio de sus notas es: {promedio: .2f}")
+
+def pedir_numero(dato):
+  numero = int(input(f"Ingrese {dato}: "))
+  return numero"""
+
+### Funciones principales
+"""1. Crear una función llamada imprimir_hola_mundo que imprima por
+pantalla el mensaje: “Hola Mundo!”. Llamar a esta función desde el
+programa principal."""
+"""imprimir_hola_mundo("Hola Mundo!")"""
+
+"""2. Crear una función llamada saludar_usuario(nombre) que reciba
+como parámetro un nombre y devuelva un saludo personalizado.
+Por ejemplo, si se llama con saludar_usuario("Marcos"), deberá de-
+volver: “Hola Marcos!”. Llamar a esta función desde el programa
+principal solicitando el nombre al usuario."""
+"""nombre_usuario = input("Ingrese su nombre: ")
+saludar_usuario(nombre_usuario)"""
+
+"""3. Crear una función llamada informacion_personal(nombre, apellido,
+edad, residencia) que reciba cuatro parámetros e imprima: “Soy
+[nombre] [apellido], tengo [edad] años y vivo en [residencia]”. Pe-
+dir los datos al usuario y llamar a esta función con los valores in-
+gresados."""
+"""nombre = input("Ingrese su nombre: ")
+apellido = input("Ingrese su apellido: ") 
+edad = input("Ingrese su edad: ")
+residencia = input("Ingrese su lugar de residencia: ")
+informacion_personal(nombre, apellido, edad, residencia)"""
+
+"""4. Crear dos funciones: calcular_area_circulo(radio) que reciba el ra-
+dio como parámetro y devuelva el área del círculo. calcular_peri-
+metro_circulo(radio) que reciba el radio como parámetro y devuel-
+va el perímetro del círculo. Solicitar el radio al usuario y llamar am-
+bas funciones para mostrar los resultados."""
+"""radio = float(input("Ingrese el radio del círculo: "))
+area = calcular_area_circulo(radio)
+perimetro = calcular_perimetro_circulo(radio)
+print(f"El área del círculo es: {area}")
+print(f"El perímetro del círculo es: {perimetro}")"""
+
+"""5. Crear una función llamada segundos_a_horas(segundos) que reciba
+una cantidad de segundos como parámetro y devuelva la cantidad
+de horas correspondientes. Solicitar al usuario los segundos y mos-
+trar el resultado usando esta función."""
+"""pedir_segundos = int(input("Ingrese la cantidad de segundos: "))
+horas = segundos_a_horas(pedir_segundos) 
+print(f"{pedir_segundos} segundos equivalen a {horas} horas.")"""
+
+"""6. Crear una función llamada tabla_multiplicar(numero) que reciba un
+número como parámetro y imprima la tabla de multiplicar de ese
+número del 1 al 10. Pedir al usuario el número y llamar a la fun-
+ción."""
+"""multiplicar = int(input("Ingrese un numero para conocer su tabla de multiplicar: "))
+tabla_multiplicar(multiplicar)"""
+
+"""7. Crear una función llamada operaciones_basicas(a, b) que reciba
+dos números como parámetros y devuelva una tupla con el resulta-
+do de sumarlos, restarlos, multiplicarlos y dividirlos. Mostrar los re-
+sultados de forma clara."""
+"""primer_numero = int(input("Ingrese el primer numero: "))
+segundo_numero = int(input("Ingrese el segundo numero: "))
+resultado = operaciones_basicas(primer_numero, segundo_numero)
+print(f"El resultado de sumar {primer_numero} + {segundo_numero} es {resultado[0]}")
+print(f"El resultado de restar {primer_numero} - {segundo_numero} es {resultado[1]}")
+print(f"El resultado de multiplicar {primer_numero} * {segundo_numero} es {resultado[2]}")
+print(f"El resultado de dividir {primer_numero} / {segundo_numero} es {resultado[3]}")"""
+
+"""8. Crear una función llamada calcular_imc(peso, altura) que reciba el
+peso en kilogramos y la altura en metros, y devuelva el índice de
+masa corporal (IMC). Solicitar al usuario los datos y llamar a la fun-
+ción para mostrar el resultado con dos decimales."""
+"""peso = int(input("Ingrese su peso en kg: "))
+altura = int(input("Ingrese su altura en centimetros: ")) / 100
+imc = calcular_imc(peso, altura)
+print(f"Su indice de masa corporal es: {imc: .2f}")"""
+
+"""9. Crear una función llamada celsius_a_fahrenheit(celsius) que reciba
+una temperatura en grados Celsius y devuelva su equivalente en
+Fahrenheit. Pedir al usuario la temperatura en Celsius y mostrar el
+resultado usando la función."""
+"""temp_c = float(input("Ingrese una temperatura en Celsius: "))
+temp_f = celsius_a_fahrenheit(temp_c)
+print(f"La temperatura en grados Fahrenheit es de: {temp_f}")"""
+
+"""10.Crear una función llamada calcular_promedio(a, b, c) que reciba
+tres números como parámetros y devuelva el promedio de ellos.
+Solicitar los números al usuario y mostrar el resultado usando esta
+función."""
+"""nota_1 = pedir_numero("la primera nota")
+nota_2 = pedir_numero("la segunda nota")
+nota_3 = pedir_numero("la tercera nota")
+calcular_promedio(nota_1, nota_2, nota_3)"""
